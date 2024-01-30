@@ -2,7 +2,7 @@ import { describe, expect, it, jest } from '@jest/globals';
 import { npmPackageMock } from './mock/npmPackage.mock.js';
 import { packages } from './mock/dependency.js';
 /**
-@author      : Ajinkya Deshmukh
+@author      : 
 @date        : 2023-04-24
 @description : check for report genrated for all the package dependency
 */

@@ -26,7 +26,7 @@ const getFilesInDirectory = (dir, ext) => {
       });
     } else {
       /**
-      @TODO : @Piyush has to work here throw proper exception
+      @TODO : @ has to work here throw proper exception
       */
     }
   } catch (err) {
@@ -64,7 +64,7 @@ const getLineNumbers = (keyword, contentsInFile) => {
   }
 };
 /**
-@author      : Abhishek Hirwani
+@author      :  
 @date        : 2023-03-22
 @description : checking object is null or not and pushing the object in the reportlist array
 @params      : @issueDataObj object containing issue data

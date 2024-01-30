@@ -33,7 +33,5 @@ describe('Check Min Length Attribute in input tag', () => {
     expect(issueObj).toBe(null);
   });
 
-  /**
-  @TODO : @Piyush has to handle line no 5, mock function
-  */
+ 
 });

@@ -36,7 +36,7 @@ describe('Generate package report file related replace package report', () => {
   });
 
   /**
-@author      : Abhishek Hirwani
+@author      : 
 @date        : 2023-04-21
 @description : Checking generatePackageReport method is calling working properly with correct arguments
 */
@@ -54,7 +54,7 @@ describe('Generate package report file related replace package report', () => {
   });
 
   /**
-@author      : Abhishek Hirwani
+@author      : 
 @date        : 2023-04-21
 @description : Checking generatePackageReport function throwing any error while it calling
 */
@@ -73,7 +73,7 @@ describe('Generate package report file related replace package report', () => {
   });
 
   /**
-@author      : Abhishek Hirwani
+@author      : 
 @date        : 2023-04-21
 @description : Checking generatePackageReport function throwing any error while writeFile function is calling
 */

@@ -3,8 +3,6 @@ export const mockNpmPackageList = {
   private: true,
   version: '0.0.1',
   type: 'module',
-  contributors: ['Summit Patil', 'Piyush Patil', 'Chaitanya Moon', 'Ajinkya Deshmukh', 'Riya Mehere'],
-  description: 'This project provides frontend boilerplates',
   engines: {node: '>=18.0.0'},
   scripts: {},
   dependencies: {

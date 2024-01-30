@@ -30,7 +30,7 @@ const checkFilesExtension = (packageJSONContent) => {
 };
 
 /**
-@author      : Piyush Patil
+@author      : 
 @date        : 2023-04-15
 @description : Check Analyzer Configuration Settings
 @params      : Package JSON File Content Object

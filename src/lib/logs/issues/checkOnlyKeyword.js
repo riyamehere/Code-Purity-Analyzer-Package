@@ -1,7 +1,7 @@
 import {getLineNumbers} from 'helper/analyzerFunctions';
 
 /**
-@author      : Abhishek
+@author      : 
 @date        : 2023-05-17
 @description : This function sets the data object for only keyword count and line numbers
 @params      : fileContent and file object inside for each.
@@ -16,7 +16,7 @@ const main = (issueFileGenericeObj, issueItem) => {
     const issueArray = fileContent.toString().match(regex);
     const dummyArray = [];
     /**
-     @author      : Abhishek Hirwani
+     @author      :  
     @date        : 2023-05-18
     @description : In this function we are getting the line number of any from the filecontent
     */

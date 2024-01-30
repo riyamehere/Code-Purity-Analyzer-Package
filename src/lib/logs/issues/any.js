@@ -13,7 +13,7 @@ const main = (issueFileGenericeObj, issueItem) => {
   if (regex.test(fileContent)) {
     const issueFoundObj = {};
     /**
-    @author      : Abhishek Hirwani
+    @author      :  
     @date        : 2023-04-05
     @description : Getting the any word which matching from the filecontent
     */
@@ -21,7 +21,7 @@ const main = (issueFileGenericeObj, issueItem) => {
     const getAny = fileContent.toString().match(regex);
     const dummyArray = [];
     /**
-    @author      : Abhishek Hirwani
+    @author      :  
     @date        : 2023-04-05
     @description : In this function we are getting the line number of any from the filecontent
     */

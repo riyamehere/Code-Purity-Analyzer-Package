@@ -2,7 +2,7 @@ import { describe, expect, it, jest, afterEach, beforeEach } from '@jest/globals
 
 /* This covers copySnippetContent, createDirectory method & check file written if file exist on that path */
 /**
-@author      : Ajinkya Deshmukh
+@author      : 
 @date        : 2023-04-20
 @description : This test case covers directory creation, file exist & content written into it with fs or not
 */

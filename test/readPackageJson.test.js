@@ -2,7 +2,7 @@ import { describe, expect, it, jest } from '@jest/globals';
 
 /* test read content from package.json */
 /**
-@author      : Ajinkya Deshmukh
+@author      : 
 @date        : 2023-04-20
 @description : Reads dependencies from package.json file
 */

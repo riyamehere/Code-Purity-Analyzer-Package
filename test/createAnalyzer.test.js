@@ -55,7 +55,7 @@ describe('CheckCreateAnalyzer File', () => {
     jest.resetAllMocks();
   });
   /**
-  @author      : Abhishek Hirwani
+  @author      : 
   @date        : 2023-05-11
   @description : Calling the createAnalyzer method wiht the correct arguments
   */
@@ -71,7 +71,7 @@ describe('CheckCreateAnalyzer File', () => {
     expect(mkdirSync).toBeCalledTimes(1);
   });
   /**
-  @author      : Abhishek Hirwani
+  @author      : 
   @date        : 2023-05-11
   @description : Calling the createAnalyzer method and check directory is created or not
   */
@@ -87,7 +87,7 @@ describe('CheckCreateAnalyzer File', () => {
     expect(existsSync).toBeCalled();
   });
   /**
-  @author      : Abhishek Hirwani
+  @author      : 
   @date        : 2023-05-11
   @description : Calling the open method with correct arguments
   */
@@ -103,7 +103,7 @@ describe('CheckCreateAnalyzer File', () => {
   });
 
   /**
-  @author      : Abhishek Hirwani
+  @author      : 
   @date        : 2023-05-11
   @description : Calling the open method with the wrong arguments and checking the throwing error
   */
@@ -122,7 +122,7 @@ describe('CheckCreateAnalyzer File', () => {
     }
   });
   /**
-  @author      : Abhishek Hirwani
+  @author      : 
   @date        : 2023-05-11
   @description : Calling the open method with the wrong arguments
   */
@@ -138,7 +138,7 @@ describe('CheckCreateAnalyzer File', () => {
     await createAnalyzer(extensionList, packageJSONContentWithoutGitHub);
   });
   /**
-  @author      : Abhishek Hirwani
+  @author      : 
   @date        : 2023-05-11
   @description : Calling the createAnalyzer method and checking the result folder is created
   */
@@ -154,7 +154,7 @@ describe('CheckCreateAnalyzer File', () => {
     await createAnalyzer(extensionList, packageJSONContentWithoutGitHub);
   });
   /**
-  @author      : Abhishek Hirwani
+  @author      : 
   @date        : 2023-05-11
   @description : Calling the createAnalyzer method and checking the result folder is not created
   */

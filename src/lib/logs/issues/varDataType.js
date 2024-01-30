@@ -1,7 +1,7 @@
 import getLineNumberMaxLengthAttribute from 'utils/helperMinMaxLine.js';
 
 /**
-@author      : Ajinkya Deshmukh
+@author      : 
 @date        : 2023-05-05
 @description : This function sets the data object for var count and line numbers
 @params      : fileContent and file object inside for each.
@@ -13,7 +13,7 @@ const main = (issueFileGenericeObj, issueItem) => {
   if (regex.test(fileContent)) {
     const issueFoundObj = {};
     /**
-    @author      : Ajinkya Deshmukh
+    @author      : 
     @date        : 2023-05-05
     @description : Getting the variable defined with var keyword
     */
@@ -21,7 +21,7 @@ const main = (issueFileGenericeObj, issueItem) => {
     const matchVarDataTypeList = fileContent.toString().match(regex);
     const dummyArray = [];
     /**
-    @author      : Ajinkya Deshmukh
+    @author      : 
     @date        : 2023-05-05
     @description : In this function we are getting the line number of var
     */

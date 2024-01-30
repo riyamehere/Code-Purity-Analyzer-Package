@@ -29,7 +29,5 @@ describe('Check Empty function in file content', () => {
     expect(issueObj).toBe(null);
   });
 
-  /**
-  @TODO : @Piyush has to handle line no 5, mock function
-  */
+ 
 });

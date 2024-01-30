@@ -10,7 +10,7 @@ const getGitData = (packageName, gitHubSecKey) =>
   });
 
 /**
- @author      : Piyush Patil
+ @author      : 
  @date        : 2023-04-15
  @description : Get all NPM Package List details using github API
  @params      : package.json file data

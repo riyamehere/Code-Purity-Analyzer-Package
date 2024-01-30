@@ -1,7 +1,7 @@
 import { afterEach, describe, expect, jest, test } from '@jest/globals';
 import { startSpinner, stopSpinner } from '../src/lib/spinner/spinner';
 /**
-@author      : Ajinkya Deshmukh
+@author      : 
 @date        : 2023-04-24
 @description : check starting spinner and as per requirement stop spinner provided by ora lib
 */

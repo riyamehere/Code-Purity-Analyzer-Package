@@ -1,6 +1,6 @@
 import {genericConst, errors} from 'custConstants';
 /**
-@author      : Piyush Patil
+@author      : 
 @date        : 2023-04-15
 @description : Get all package.json file contents in JSON format
 @params      : package content in string format
@@ -22,7 +22,7 @@ const getPackageJSONFormatData = (packageContent) => {
 };
 
 /**
-@author      : Piyush Patil
+@author      : 
 @date        : 2023-04-15
 @description : Get all
 @params      : Input Params
@@ -56,7 +56,7 @@ const getNPMPackageReportKey = () => `******************************************
 ***********************************************************************************************************************************************************************************************************\n`;
 
 /**
-@author      : Abhishek Hirwani
+@author      :  
 @date        : 2023-05-15
 @description : Here checking the github value and length of the key
 @params      : Getting the github key value
@@ -75,7 +75,7 @@ const checkGitHubKeyVal = (packageJSONContent) => {
 };
 
 /**
-@author      : Abhishek Hirwani
+@author      :  
 @date        : 2023-05-16
 @description : Here checking the root folder value and length of the root folder
 @params      : Getting the root folder value

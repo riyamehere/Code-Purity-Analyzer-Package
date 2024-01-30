@@ -2,7 +2,7 @@ import copyTemplate from 'utils/copyFileContent.js';
 import {snippetPaths, analyzerPaths} from 'custConstants';
 
 /**
-@author      : Abhishek Hirwani
+@author      :  
 @date        : 2023-03-09
 @description : This functions copies the content from template to the actual file
 */

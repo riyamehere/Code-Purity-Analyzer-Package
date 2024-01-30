@@ -1,5 +1,5 @@
 /**
- @author      : Piyush Patil
+ @author      : 
 @date        : 2023-04-15
 @description : Read the Package.json file contents from specified project directory.
 @params      : No

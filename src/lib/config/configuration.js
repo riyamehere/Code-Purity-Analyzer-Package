@@ -5,7 +5,7 @@ import {getPackageJSONFormatData} from 'helper/package/packageJson.helper.js';
 import {checkPackageConfigError} from 'helper/error/error.js';
 
 /**
-@author      : Piyush Patil
+@author      : 
 @date        : 2023-04-15
 @description : Managed all configuration setting and check validation files passes properly or not, if we get any errors in config, throw an error.
 @params      : Nothing

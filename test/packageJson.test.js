@@ -24,7 +24,7 @@ import {
 } from './mock/packageContent.js';
 
 /**
-@author      : Ajinkya Deshmukh
+@author      : 
 @date        : 2023-04-24
 @description : packageJson returns all the dependency such as devDependency or dependency in single object.
 */
@@ -186,7 +186,7 @@ describe('getNPMPackageReportKey', () => {
 });
 
 /**
-@author      : Abhishek Hirwani
+@author      : 
 @date        : 2023-05-15
 @description : checkGitHubKeyVal method call and check it has Git Hub key value or not
 */
@@ -223,13 +223,13 @@ describe('checkGitHubKeyVal ', () => {
 });
 
 /**
-@author      : Abhishek Hirwani
+@author      : 
 @date        : 2023-05-16
 @description : getRootFolderPath method call to check the root folder value and length
 */
 describe('getRootFolderPath method call to check the root folder value', () => {
   /**
-  @author      : Abhishek Hirwani
+  @author      : 
   @date        : 2023-05-16
   @description : getRootFolderPath method call and with the correct packageJSONContent data
   */
@@ -240,7 +240,7 @@ describe('getRootFolderPath method call to check the root folder value', () => {
   });
 
   /**
-  @author      : Abhishek Hirwani
+  @author      : 
   @date        : 2023-05-16
   @description : getRootFolderPath method call and with the wring packageJSONContent data
   */
@@ -250,7 +250,7 @@ describe('getRootFolderPath method call to check the root folder value', () => {
   });
 
   /**
-  @author      : Abhishek Hirwani
+  @author      : 
   @date        : 2023-05-16
   @description : getRootFolderPath method call and check the PackageJson content
   */
@@ -260,7 +260,7 @@ describe('getRootFolderPath method call to check the root folder value', () => {
   });
 
   /**
-  @author      : Abhishek Hirwani
+  @author      : 
   @date        : 2023-05-16
   @description : getRootFolderPath method call and check the analyzer content
   */
@@ -270,7 +270,7 @@ describe('getRootFolderPath method call to check the root folder value', () => {
   });
 
   /**
-  @author      : Abhishek Hirwani
+  @author      : 
   @date        : 2023-05-16
   @description : getRootFolderPath method call and check the rootFolder is empty
   */
@@ -280,7 +280,7 @@ describe('getRootFolderPath method call to check the root folder value', () => {
   });
 
   /**
-  @author      : Abhishek Hirwani
+  @author      : 
   @date        : 2023-05-16
   @description : getRootFolderPath method call and check the rootFolder is empty
   */
