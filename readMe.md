@@ -12,13 +12,13 @@
 
 1. Run this command in the project's root.
 
-- **npm link konverge-code-analyzer**
+- **npm link code-analyzer**
 
 - This command will install the package in the project's node modules directory.
 
 2. Create a script in project's package.json as follows -
 
-- "groot:analyzer": "konverge-code-analyzer"
+- "groot:analyzer": "code-analyzer"
 
 - **Note** : You can give any name to the script.
 

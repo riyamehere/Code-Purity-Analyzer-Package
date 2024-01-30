@@ -66,7 +66,7 @@ const createPDF = () => {
     const pageNumberToRemove = 2;
     jspdfInstance.deletePage(pageNumberToRemove);
     /* heading text and its x and y spacing values */
-    jspdfInstance.text('Konverge Code Analyzer', 15, 20);
+    jspdfInstance.text('Code Analyzer', 15, 20);
     /* set the font size for subheading */
     jspdfInstance.setFontSize(15);
     /* set its color property */

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Konverge Analyzer</title>
+    <title>Code Analyzer</title>
     <link href="./bootstrap.css" rel="stylesheet">
     <style>
         html {
@@ -210,9 +210,7 @@
 
         <div class="d-flex justify-content-end me-4 version"><span class="">Version V1</span></div>
         <div class="page-footer d-flex  flex-column  justify-content-center align-self-center">
-            <div><a href="https://konverge.ai/" class="footer_color" target="_blank">Konverge.AI Copyright 2023, All
-                    Rights Reserved</a>@2023</div>
-            <div><span class="">Contact: dpe@konverge.ai</span></div>
+            <div><span class="">Code Analyzer</span></div>
         </div>
     </div>
 </body>
