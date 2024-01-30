@@ -1,0 +1,45 @@
+/* generates list of issues found based on component which it is coming from. */
+(() => {
+    /* get all data having issues from window */
+    const issueList = window.singleIssueData;
+    const urlFileName = window.location.href.slice(window.location.href.indexOf('=') + 1);
+    if (issueList && issueList.length > 0) {
+        /* filters only selected component object coming from index.html */
+        const singleFileObj = issueList.find((issueObj) => issueObj.fileName === urlFileName);
+        if (singleFileObj) {
+            const fileNameDomRef = document.getElementById('issueFileName');
+            const issueTableDomRef = document.getElementById('issue_table');
+            if (fileNameDomRef) {
+                fileNameDomRef.innerHTML = singleFileObj.fileName;
+                let tableRow = ``;
+                /* renders all the data inside table & generates report on issue.html*/
+                singleFileObj.issueList.forEach(element => {
+                   tableRow = tableRow + `<tr>
+                   <td class="issue-table-td" ><a href="./reports/${singleFileObj.fileName}/index.html">${element.type}</a></td>
+                   <td class="issue-table-td" >${element.issueType}</td>
+                   <td class="issue-table-td" >${element.issuePriority}</td>
+                   <td class="issue-table-td" >${element.issueCount}</td>
+                   <td class="issue-table-td" >${
+                     element.type === 'MaxLength' ? '-' : element.issueLineNumber.join(',')
+                   }</td>
+                </tr>` 
+                });
+                issueTableDomRef.innerHTML = `<table class="coverage-summary">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Issue Name</th>
+                                                        <th>Issue Type</th>
+                                                        <th>Priority</th>
+                                                        <th>Number of issues</th>
+                                                        <th>Line Number</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                   
+                                                    ${tableRow}
+                                                </tbody>
+                                            </table>`;
+            }
+        }
+    }
+})();

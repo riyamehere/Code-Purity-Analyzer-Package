@@ -1,0 +1,48 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["prettier", "airbnb/base"],
+  "plugins": ["prettier"],
+  "overrides": [],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
+    }
+  },
+  "rules": {
+    "max-len": "off",
+    "no-alert": "off",
+    "max-lines": [
+      "error",
+      {
+        "max": 300,
+        "skipComments": true,
+        "skipBlankLines": true
+      }
+    ],
+    "import/extensions": "off",
+    "object-curly-spacing": "off",
+    "linebreak-style": "off",
+    "implicit-arrow-linebreak": "off",
+    "object-curly-newline": "off",
+    "operator-linebreak": "off" /* TODO: Need to look into it. */,
+    "complexity": ["error", 5],
+    "quotes": ["warn", "single"] /* usage of '' */,
+    "semi": ["warn", "always"],
+    "no-param-reassign": "off" /* Disallow reassigning function parameters */,
+    "no-empty": "warn" /* Disallow empty block statements */,
+    "no-console": "warn" /* Disallow the use of console */,
+    "no-unused-vars": ["error", {"vars": "all", "args": "after-used", "ignoreRestSiblings": false}],
+    "no-cond-assign": ["error", "except-parens"],
+    "no-await-in-loop": "off",
+    "import/prefer-default-export": "off"
+  }
+}

@@ -1,0 +1,96 @@
+/* Create a instance of jsPDF */
+const setupJSPDF = () => {
+  const pdfInstance = new jsPDF();
+  pdfInstance.setFontSize(18);
+  pdfInstance.setFontType('bold');
+  return pdfInstance;
+};
+
+/* This function generates the issue table portion in pdf i.e the 2nd layer of code analyzer */
+const createIssueTable = (dataList, jspdfInstance) => {
+  /* set the css for heading */
+  jspdfInstance.setFontSize(15);
+  jspdfInstance.setTextColor(0, 0, 0);
+  /* Set initial vertical position to start from the top */
+  let yPosition = jspdfInstance.autoTable.previous.finalY + 30;
+
+  dataList.forEach((obj) => {
+    /* set the filename text */
+    jspdfInstance.text(`${obj.fileName}`, 15, yPosition);
+    const issuesSelectedKeys = obj.issueList.map((issueListObj) => ({
+      'Issue Name': issueListObj.type,
+      'Issue Type': issueListObj.issueType,
+      'Priority': issueListObj.issuePriority,
+      'Number of issues': issueListObj.issueCount,
+      'Line Number': issueListObj.issueLineNumber,
+    }));
+    const issueHeaders = Object.keys(issuesSelectedKeys[0]);
+    const issueTableData = issuesSelectedKeys.map((obj) => Object.values(obj));
+    /* set the table data */
+    jspdfInstance.autoTable({
+      head: [issueHeaders],
+      body: issueTableData,
+      startY: yPosition + 5,
+    });
+
+    /* Increment the vertical position to move to the next section */
+    yPosition = jspdfInstance.autoTable.previous.finalY + 25; // Adjust the value as needed
+
+    const pageHeight = jspdfInstance.internal.pageSize.height - 20
+    if (yPosition >= pageHeight) {
+      jspdfInstance.addPage(); /* Add a new page **/
+      yPosition = 10; /* Reset the vertical position to start from the top */
+    }
+  });
+};
+/* This function generates a pdf file according to the specified parameters and data */
+const createPDF = () => {
+  try {
+    /* set the data in data variable */
+    const data = window.singleIssueData;
+    /* create a new array from data according to the requirement */
+    let selectedKeys = [];
+    if (data && data.length > 0) {
+      selectedKeys = data.map((obj) => ({
+        'File Name': obj.fileName,
+        'Total number of issues': obj.issueList.length,
+      }));
+    }
+    /* set the header content */
+    const headers = Object.keys(selectedKeys[0]);
+    /* set the table data */
+    const tableData = selectedKeys.map((obj) => Object.values(obj));
+
+    /* Calling the setupJSPDF() function to use the odf instance */
+    const jspdfInstance = setupJSPDF();
+    const pageNumberToRemove = 2;
+    jspdfInstance.deletePage(pageNumberToRemove);
+    /* heading text and its x and y spacing values */
+    jspdfInstance.text('Konverge Code Analyzer', 15, 20);
+    /* set the font size for subheading */
+    jspdfInstance.setFontSize(15);
+    /* set its color property */
+    jspdfInstance.setTextColor(100, 149, 237);
+    /* subheading text and its x and y spacing values */
+    jspdfInstance.text('All files Reports', 15, 32);
+    /* creating the reports table using autoTable and adding the heading and table body data */
+    jspdfInstance.autoTable({
+      head: [headers],
+      body: tableData,
+      startY: 38,
+    });
+    /* set css and set the heading 'Issue List Report' */
+    jspdfInstance.setFontSize(15);
+    jspdfInstance.setTextColor(100, 149, 237);
+    jspdfInstance.text('Issue List Report', 15, jspdfInstance.autoTable.previous.finalY + 15);
+    /* check if data is not null and call the create issue table function here */
+    if (data && data.length > 0) {
+      createIssueTable(data, jspdfInstance);
+    }
+    /* download the report in pdf format */
+    jspdfInstance.save('Reports.pdf');
+  } catch (error) {
+    alert(`Error generating PDF : ${error.message}`);
+  }
+}
+

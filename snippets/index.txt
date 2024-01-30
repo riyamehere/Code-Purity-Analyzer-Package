@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Konverge Analyzer</title>
+    <link href="./bootstrap.css" rel="stylesheet">
+    <style>
+        html {
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            width: 150px;
+            height: 60px;
+            object-fit: cover;
+        }
+
+        .header {
+            box-shadow: 0px 4px 20px rgb(35 35 35 / 15%);
+            box-sizing: border-box;
+            height: 8vh;
+        }
+
+        .header.title {
+            color: #fff;
+            vertical-align: middle;
+            justify-content: center;
+        }
+
+        .inner-container {
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+
+        .banner {
+            height: 12vh;
+            background-image: url('./banner.svg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .section {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-gap: 2rem;
+            height: 600px;
+        }
+
+        .section .item {
+            display: grid;
+            grid-template-columns: 60% auto;
+            grid-gap: 1rem;
+            margin: 2rem 1rem;
+            background: #FFFFFF;
+            border: 1px solid #E2E2E2;
+            box-shadow: 0px 0px 10px rgb(0 0 0 / 24%);
+            border-radius: 12px;
+            padding: 1rem;
+        }
+
+        .inner_item.code_analyzer {
+            background-image: url('./code_analyzer.svg');
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .inner_item.pkg_analyzer {
+            background-image: url('./pkg_analyzer.svg');
+            background-size: contain;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .btn {
+            background-color: #211E8B;
+            border-radius: 8px;
+            color: #fff;
+            vertical-align: middle;
+        }
+
+        .inner_item .title {
+            color: #000000;
+            font-size: 18px;
+        }
+
+        .inner_item .desc {
+            font-size: 14px;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        .page-footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 8vh;
+            background-color: #262664;
+            color: #fff;
+            align-items: center;
+        }
+
+        .footer_color {
+            color: white;
+            text-decoration: none;
+        }
+
+        .chat_section {
+            width: 100px;
+            position: sticky;
+            float: right;
+        }
+
+        .contact_btn {
+            bottom: 60px;
+            right: 0;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-right: 32px;
+            border-radius: 100%;
+            width: 60%;
+            height: 60%;
+        }
+
+        .version {
+            position: fixed;
+            bottom: 80px;
+            float: right;
+            right: 0;
+        }
+
+        .btn_report{
+            width: 70px;
+            height: 40px;
+        }
+
+        .btn:hover {
+                         background-color: #211E8B;
+        }
+    </style>
+    <script>
+        var test;
+        /*It is call back function and in this it getting the data from the dataNotFound.json file and this file is created when it does not get the github key */
+        function getGitHubKey(data) {
+            test = data;
+        }
+        function loadPackReport() {
+            if (!test) {
+                window.location.href = './package_index.html';
+            } else {
+                alert("Data Not Found");
+            }
+        }
+    </script>
+    <script src=".result/dataNotFound.json"></script>
+</head>
+
+<body>
+    <div class="container-fluid p-0">
+        <div class="card header title d-flex ps-3">
+            <img src="./logo.svg" alt="logo" class="logo" />
+        </div>
+        <div class="inner-container">
+            <div class="card mt-4 banner"></div>
+            <div class="section mt-3">
+                <div class="item">
+                    <div class="inner_item code_analyzer"></div>
+                    <div class="inner_item">
+                        <span class="d-block title"><b>Code Analyzer</b></span>
+                        <p class="mt-1 desc">
+                            A code analyzer checks source code against predefined rules to identify potential errors or
+                            vulnerabilities.
+                            It generates a report that lists the issues found and may suggest ways to fix them.
+                            Using a code analyzer improves code quality by identifying issues early, saving time and
+                            resources.
+                            It also ensures compliance with coding standards, making code consistent and maintainable.
+                            Code analyzers display file content and mark the location of issues, enabling developers to
+                            locate and fix issues quickly.
+                            Code analyzers are a crucial tool for software development teams, reducing risks and
+                            improving the quality of software products.
+                        </p>
+                        <button class="btn btn_report"> <a class="footer_color" href="./code_index.html"> Report </a> </button>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="inner_item pkg_analyzer"></div>
+                    <div class="inner_item">
+                        <span class="d-block title"><b>Package Analyzer</b></span>
+                        <p class="mt-1 desc">A package analyzer is a tool that generates reports based on the repository
+                            history of an npm package.
+                            The reports contain key metrics such as the number of stars, forks, vulnerability status,
+                            maintenance, and more.
+                            By analyzing these metrics, developers can make informed decisions about which packages to
+                            use in their projects, avoiding problematic ones and saving time. The package analyzer helps
+                            ensure that projects are stable, secure, and of high quality. </p>
+                        <button class="btn btn_report" onclick="loadPackReport()"> <a class="footer_color"  > Report </a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-end me-4 version"><span class="">Version V1</span></div>
+        <div class="page-footer d-flex  flex-column  justify-content-center align-self-center">
+            <div><a href="https://konverge.ai/" class="footer_color" target="_blank">Konverge.AI Copyright 2023, All
+                    Rights Reserved</a>@2023</div>
+            <div><span class="">Contact: dpe@konverge.ai</span></div>
+        </div>
+    </div>
+</body>
+
+</html>
